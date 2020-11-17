@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #e8edfa;
+    font-family: 'Open-Sans', sans-serif, Helvetica;
+}
+
+h1 {
+    font-weight: unset;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: 5% 10% auto;
+    background-color: #fff;
+}
+
+#art {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    height: 100%;
+}
+
+.login-form {
+    flex: 1;
+    margin: 10% 10%;
+}
+
+.login-form h1 {
+    color: #425ac2;
+    font-size: 2.7em;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 3em;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #a4b8ea;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+
+input:focus~label,
+input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #0e1b8a;
+}
+
+
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #a4b8ea;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+
+input:focus~.bar:before,
+input:focus~.bar:after {
+    width: 50%;
+}
+
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #0e1b8a;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #0e1b8a;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #0e1b8a;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+.submit{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8em;
+}
+
+.submit h2{
+    font-size: 1.8em;
+    margin-top: 10%;
+    color: #425ac2;
+}
+
+img{
+    
+    width: 40%;
+    height: auto;
+  
+}
+
+#login{
+    margin-left: 8em;
+    border: none;
+    display: block;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    background-color: #425ac2;
+    cursor: pointer;
+}
